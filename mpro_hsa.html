@@ -276,7 +276,7 @@ Tom Kurtzman
  <span class="jmolButton" onclick="button20()">Mpro + HSA Etot + MPWat</span><br /> 
  <script type="text/javascript"> 
  function button20(){ 
- var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;set rangeSelected on;select :E;spacefill 1.0;color relativeTemperature;color TRANSLUCENT 0.25;set labeloffset 0 0;label %i;color label green;select :M;wireframe 0.15;spacefill 23%;color cpk"; 
+ var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;set rangeSelected on;select :E;spacefill 1.0;color relativeTemperature;color TRANSLUCENT 0.35;set labeloffset 0 0;label %i;color label green;select :M;wireframe 0.15;spacefill 23%;color cpk"; 
  Jmol.script(myJmol, tempJmolString); 
  } 
  </script> 
@@ -289,6 +289,45 @@ var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20
 Jmol.script(myJmol, tempJmolString); 
 } 
 </script>
+
+
+<span class="jmolButton" onclick="button22()">Mpro + HSA Etot + MPWat + N3</span><br /> 
+<script type="text/javascript"> 
+function button22(){ 
+var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;set rangeSelected on;select :E;spacefill 1.0;color relativeTemperature;color TRANSLUCENT 0.35;set labeloffset 0 0;label %i;color label green;select :L;wireframe 0.15;spacefill 23%;color cpk;select :M;wireframe 0.15;spacefill 23%;color cpk"; 
+Jmol.script(myJmol, tempJmolString); 
+} 
+</script>
+
+
+<span class="jmolButton" onclick="button23()">Mpro + High HSA Etot + MPWat + N3</span><br /> 
+<script type="text/javascript"> 
+function button23(){ 
+var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;set rangeSelected on;select :E;spacefill 1.0;color relativeTemperature;color TRANSLUCENT 0.50;set labeloffset 0 0;label %i;color label green;restrict :E and (1 or 2 or 5 or 8 or 12 or 15-20 or 24 or 27 or 29 or 30 or 32-35);select :L;wireframe 0.15;spacefill 23%;color cpk;select (1 or 2 or 5 or 8 or 12 or 15-20 or 24 or 27 or 29 or 30 or 32-35) and :M;wireframe 0.15;spacefill 23%;color cpk"; 
+Jmol.script(myJmol, tempJmolString); 
+} 
+</script>
+
+
+<span class="jmolButton" onclick="button24()">Mpro + HSA Etot > 0.5 kcal/mol bulk + MPWat + N3</span><br /> 
+<script type="text/javascript"> 
+function button24(){ 
+var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;select :E and (1 or 2 or 5 or 8 or 12 or 17 or 19);spacefill 1.0;set userColorScheme [xFFBFBF] [xFF8080] [xFF4040] [xFF0000];set rangeSelected on;color property temperature 'user';color TRANSLUCENT 0.40;set labeloffset 0 0;label %i;color label green;select :L;wireframe 0.15;spacefill 23%;color cpk;select (1 or 2 or 5 or 8 or 12 or 17 or 19) and :M;wireframe 0.15;spacefill 23%;color cpk"; 
+//var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;select :E and (1 or 2 or 5 or 8 or 12 or 17 or 19);spacefill 1.0;set userColorScheme [xFFBFBF] [xFF8080] [xFF4040] [xFF0000];color property temperature 'user' range -0.1 1.0;color TRANSLUCENT 0.40;set labeloffset 0 0;label %i;color label green;select :L;wireframe 0.15;spacefill 23%;color cpk;select (1 or 2 or 5 or 8 or 12 or 17 or 19) and :M;wireframe 0.15;spacefill 23%;color cpk";
+Jmol.script(myJmol, tempJmolString); 
+} 
+</script>
+
+
+<span class="jmolButton" onclick="button25()">Mpro + HSA Etot > 0.25 kcal/mol bulk + MPWat + N3</span><br /> 
+<script type="text/javascript"> 
+function button25(){ 
+var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;select :E and (1 or 2 or 5 or 8 or 12 or 17 or 19 or 27 or 32);spacefill 1.0;set userColorScheme [xFFBFBF] [xFF8080] [xFF4040] [xFF0000];set rangeSelected on;color property temperature 'user';color TRANSLUCENT 0.40;set labeloffset 0 0;label %i;color label green;select :L;wireframe 0.15;spacefill 23%;color cpk;select (1 or 2 or 5 or 8 or 12 or 17 or 19 or 27 or 32) and :M;wireframe 0.15;spacefill 23%;color cpk"; 
+//var tempJmolString = "exit; zap; set echo 50% 50%; set echo CENTER; font echo 20 serif bolditalic; color echo red; echo Loading Molecule|Please Wait; refresh; load https://raw.githubusercontent.com/acruzpr/covidtest/master/system.pdb; echo; define bsite (WITHIN(7,:L) and :P);isoSurface surf2 select(bsite) ignore(not bsite) solvent 1.4;color $surf2 lightgrey;restrict $surf2;zoomto {:L} 0;select :E and (1 or 2 or 5 or 8 or 12 or 17 or 19 or 27 or 32);spacefill 1.0;set userColorScheme [xFFBFBF] [xFF8080] [xFF4040] [xFF0000];color property temperature 'user' range -0.1 1.0;color TRANSLUCENT 0.40;set labeloffset 0 0;label %i;color label green;select :L;wireframe 0.15;spacefill 23%;color cpk;select (1 or 2 or 5 or 8 or 12 or 17 or 19 or 27 or 32) and :M;wireframe 0.15;spacefill 23%;color cpk";
+Jmol.script(myJmol, tempJmolString); 
+} 
+</script>
+
 
 <table class="tg">
     <tr>
